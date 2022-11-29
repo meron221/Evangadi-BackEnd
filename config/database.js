@@ -5,6 +5,7 @@ const pool = mysql.createPool({
 	password: process.env.DB_PASS,
 	database: process.env.MYSQL_DB,
 	connectionLimit: 10,
+	port: "3306",
 });
 pool.getConnection(function (err, connection) {
 	console.log("Database connected");
